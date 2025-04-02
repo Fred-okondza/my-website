@@ -28,7 +28,7 @@
         <h2>Hello, I am Fred Okondza</h2>
         <p>Student in Data Science and Machine Learning</p>
         <img src="fred.jpeg" alt="Profile Picture">
-        <a href="CV.pdf" download class="download-btn">Download Resume</a>
+        <a href="CV.pdf" download class="download-btn" target="_self">Download Resume</a>
     </header>
 
     <!-- About Section -->
@@ -76,26 +76,26 @@
             <h3>Projects</h3>
             <div class="grid">
                 <div class="project">
-                    <h4><a href="https://github.com/Fred-okondza/my-website/blob/main/BANK_TRANSACTION.Rmd" target="_blank">Bank Transactions Analysis</a></h4>
+                    <h4><a href="https://github.com/Fred-okondza/my-website/blob/main/BANK_TRANSACTION.Rmd" target="_self">Bank Transactions Analysis</a></h4>
                     <p>This project analyzes bank transaction data to identify patterns and detect fraud. Using techniques like Linear Regression, Random Forest, and others, 
                     the goal is to flag suspicious activities, classify transaction types, and predict future trends, helping improve security and optimize banking processes.</p>
                 </div>
 
                 <div class="project">
-                    <h4><a href="https://github.com/Fred-okondza/my-website/blob/main/Bank.ipynb" target="_blank">Financial Fraud Detection: Machine Learning for Transaction Analysis</a></h4>
+                    <h4><a href="https://github.com/Fred-okondza/my-website/blob/main/Bank.ipynb" target="_self">Financial Fraud Detection: Machine Learning for Transaction Analysis</a></h4>
                     <p>This project utilizes machine learning algorithms such as Clustering for Fraud Detection, Support Vector Machines (SVM),DBSCAN and others to analyze financial 
                     transaction data. The objective is to detect and classify fraudulent activities, enhancing fraud prevention measures and improving transaction security for 
                     financial institutions.</p>
                 </div>
 
                 <div class="project">
-                    <h4><a href="https://github.com/Fred-okondza/my-website/blob/main/Telco_model.ipynb" target="_blank">Customer Churn Prediction and Retention Strategy</a></h4>
+                    <h4><a href="https://github.com/Fred-okondza/my-website/blob/main/Telco_model.ipynb" target="_self">Customer Churn Prediction and Retention Strategy</a></h4>
                     <p>This project involved developing a predictive model to identify customers at risk of churn. Using machine learning, I analyzed customer behavior to 
                         forecast churn and designed a targeted retention strategy to improve customer loyalty and reduce turnover.</p>
                 </div>
 
                 <div class="project">
-                    <h4><a href="https://github.com/Fred-okondza/my-website/blob/main/data_science.ipynb" target="_blank">Data Science Job Analysis</a></h4>
+                    <h4><a href="https://github.com/Fred-okondza/my-website/blob/main/data_science.ipynb" target="_self">Data Science Job Analysis</a></h4>
                     <p>This project analyzes job listings in the data science field to identify key trends and insights. It examines the skills, qualifications, and experience 
                     employers require, along with salary ranges and job locations. By studying these factors, the project provides valuable insights for individuals looking to 
                     enter the data science field, highlighting the most in-demand skills and how the job market is evolving.</p>
@@ -157,16 +157,16 @@
     <footer id="social">
         <h3>Follow Me</h3>
         <div>
-            <a href="https://www.linkedin.com/in/fred-okondza-9371b1260/" target="_blank">
+            <a href="https://www.linkedin.com/in/fred-okondza-9371b1260/" target="_self">
                 <i class="fab fa-linkedin-in"></i>
             </a>
-            <a href="https://github.com/Fred-okondza" target="_blank">
+            <a href="https://github.com/Fred-okondza" target="_self">
                 <i class="fab fa-github"></i>
             </a>
             <a href="mailto:fred.okondza@aims-cameroon.org">
                 <i class="fas fa-envelope"></i>
             </a>
-            <a href="https://www.facebook.com/fred.okondza" target="_blank">
+            <a href="https://www.facebook.com/fred.okondza" target="_self">
                 <i class="fab fa-facebook"></i>
             </a>
             <a href="tel:+237658499040">
@@ -178,7 +178,7 @@
         <div id="indaba">
             <img src="images_IndabaX.png" alt="DeepLearning IndabaX Congo Logo" id="indaba-logo">
             <p>Member of  
-                <a href="https://www.linkedin.com/company/indabax-congo-brazzaville/posts" target="_blank">
+                <a href="https://www.linkedin.com/company/indabax-congo-brazzaville/posts" target="_self">
                     DeepLearning IndabaX Congo
                 </a>
             </p>
@@ -186,49 +186,50 @@
     </footer>
     
 
- <!-- Le script JavaScript ajouté à la fin de la page -->
+ <!-- script JavaScript -->
  <script>
-    // Récupérer l'élément du formulaire
+    
     const form = document.getElementById('contactForm');
     
-    // Ajouter un événement pour la soumission du formulaire
+    
     form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Empêcher l'envoi du formulaire pour tester
+        event.preventDefault(); 
 
-        // Récupérer les valeurs des champs du formulaire
+       
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const message = document.getElementById('message').value;
 
-        // Afficher les données dans la console (pour tester)
+        
         console.log("Nom:", name);
         console.log("Email:", email);
         console.log("Message:", message);
 
-        // Afficher un message de confirmation
+        
         alert("Thank you for your message! We'll get back to you soon.");
         
-        // Réinitialiser le formulaire après soumission
+        
         form.reset();
     });
 
-    // Ajout de feedback visuel lors du focus sur un champ du formulaire
+    
     const inputs = document.querySelectorAll('#contactForm input, #contactForm textarea');
     
     inputs.forEach(input => {
-        input.addEventListener('focus', function() {
-            input.style.backgroundColor = '#ecf0f1'; // Couleur de fond claire lors du focus
-            input.style.borderColor = '#3498db'; // Bordure bleue
-        });
+    input.addEventListener('focus', function() {
+        input.style.backgroundColor = '#ecf0f1'; 
+        input.style.borderColor = '#3498db'; 
 
         input.addEventListener('blur', function() {
-            input.style.backgroundColor = ''; // Réinitialiser la couleur de fond
-            input.style.borderColor = ''; // Réinitialiser la couleur de la bordure
+            input.style.backgroundColor = ''; 
+            input.style.borderColor = ''; 
         });
     });
+});
+
 </script>
 <script>
-    // Fonction pour détecter quand un élément entre dans la vue
+    
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -237,24 +238,24 @@
                 entry.target.classList.remove('visible');
             }
         });
-    }, { threshold: 0.5 }); // L'élément doit être à 50% visible pour déclencher l'animation
+    }, { threshold: 0.5 }); 
 
-    // Sélectionner les éléments à animer
+    
     const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
 
-    // Observer chaque élément
+    
     elementsToAnimate.forEach(element => {
         observer.observe(element);
     });
 </script>
 <script>
-    // Fonction pour vérifier si un élément est visible dans la fenêtre
+    
 function isElementInView(el) {
     const rect = el.getBoundingClientRect();
     return rect.top >= 0 && rect.bottom <= window.innerHeight;
 }
 
-// Appliquer l'animation lorsque l'élément entre dans la vue
+
 function animateOnScroll() {
     const elements = document.querySelectorAll('.animate-on-scroll');
     elements.forEach((element) => {
@@ -264,13 +265,12 @@ function animateOnScroll() {
     });
 }
 
-// Exécuter la fonction au défilement de la page
 window.addEventListener('scroll', animateOnScroll);
 
-// Appliquer immédiatement l'animation pour les éléments déjà visibles au chargement
-animateOnScroll();
 
+animateOnScroll();
+    
 </script>
 
-</body>
+    </body>
 </html>
